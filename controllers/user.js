@@ -343,7 +343,7 @@ exports.getVerifyEmail = (req, res, next) => {
     });
     const mailOptions = {
       to: req.user.email,
-      from: 'hackathon@starter.com',
+      from: process.env.SENDGRID_USER,
       subject: 'Please verify your email address on Hackathon Starter',
       text: `Thank you for registering with hackathon-starter.\n\n
         This verify your email address please click on the following link, or paste this into your browser:\n\n
@@ -432,7 +432,7 @@ exports.postReset = (req, res, next) => {
     });
     const mailOptions = {
       to: user.email,
-      from: 'hackathon@starter.com',
+      from: process.env.SENDGRID_USER,
       subject: 'Your Hackathon Starter password has been changed',
       text: `Hello,\n\nThis is a confirmation that the password for your account ${user.email} has just been changed.\n`
     };
@@ -526,7 +526,7 @@ exports.postForgot = (req, res, next) => {
     });
     const mailOptions = {
       to: user.email,
-      from: 'hackathon@starter.com',
+      from: process.env.SENDGRID_USER,
       subject: 'Reset your password on Hackathon Starter',
       text: `You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n
         Please click on the following link, or paste this into your browser to complete the process:\n\n
