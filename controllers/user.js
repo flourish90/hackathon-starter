@@ -571,3 +571,13 @@ exports.postForgot = (req, res, next) => {
     .then(() => res.redirect('/forgot'))
     .catch(next);
 };
+
+/**
+ * GET /forgot
+ * Forgot Password page.
+ */
+exports.userlist = (req, res) => {
+  res.render('account/list', {
+    title: 'userlist'
+  });
+};
