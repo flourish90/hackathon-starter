@@ -2,5 +2,8 @@ extends ../layout
 
 block content
   .pb-2.mt-2.mb-4.border-bottom
-    h3 List
-    h2 user.email 
+    h3 !{title}
+
+    ul
+      each user in users
+        li=user.hund

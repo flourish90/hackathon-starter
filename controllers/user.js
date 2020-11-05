@@ -577,7 +577,16 @@ exports.postForgot = (req, res, next) => {
  * Forgot Password page.
  */
 exports.userlist = (req, res) => {
-  res.render('account/list', {
-    title: 'userlist'
-  });
+
+  User.find({}, function(err, users) {
+    res.render('account/list', {
+      title: 'Benutzerliste',
+      users: users
+    });
+
+     
+  }); 
+
+  
+  
 };
