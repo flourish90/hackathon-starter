@@ -29,10 +29,12 @@ bower_components
 
 # Editors
 .idea
+
 .vscode
 *.iml
 modules.xml
 *.ipr
+*.code-workspace
 
 # Folder config file
 Desktop.ini
